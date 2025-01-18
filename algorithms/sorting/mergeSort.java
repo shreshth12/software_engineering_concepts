@@ -21,7 +21,7 @@ public class mergeSort {
         if (array == null || array.length <= 1) {
             return array;
         }
-        
+
         // Run the divide function, that will in turn run the merge and sort
         divide(array, 0, array.length - 1);
         return array;
