@@ -1,3 +1,16 @@
+/*
+ * bucketSort algorithm is where each given number in an array acts as a key to
+ * an index in another array, where value is the number of times that key as
+ * been repeated. This allows to track counter of each number and then later
+ * use it to reform the array in sorted order.
+ * 
+ * The time complexity of this algorithm is O(N), where N is the number of elements in the array
+ * and space complexity is O(N) where, N again is the maximum/minimum number in the array.
+ * 
+ * This algorithm is not sutaible for arrays that are not of fixed length as it can overflow
+ * the memory.
+ */
+
 import java.util.Arrays;
  
 public class bucketSort {
