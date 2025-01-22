@@ -63,4 +63,27 @@ public class binaryTreeNode {
             }
         }
     }
+
+    // method to perform a search for a target in a "binary search tree"
+    public static boolean bstSearch(binaryTreeNode root, int target){
+        // If the root is null or reached the end of the tree
+        if(root == null){
+            return false;
+        }
+
+        // If the target is on the right side, search right
+        if(target > root.value){
+            return bstSearch(root.right, target);
+        }
+
+        // If the target is on the left side, search left
+        else if(target < root.value){
+            return bstSearch(root.left, target);
+        }
+
+        // Else, found the target
+        else{
+            return true;
+        }
+    }
 }
