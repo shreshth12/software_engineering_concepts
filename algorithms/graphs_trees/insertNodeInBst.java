@@ -7,12 +7,12 @@ public class insertNodeInBst {
         binaryTreeNode root = new binaryTreeNode(5);
         
         // Create and attach left and right children of the root
-        root.left = new binaryTreeNode(5);
+        root.left = new binaryTreeNode(2);
         root.right = new binaryTreeNode(15);
         
         // Add children to the left child
-        root.left.left = new binaryTreeNode(3);
-        root.left.right = new binaryTreeNode(7);
+        root.left.left = new binaryTreeNode(1);
+        root.left.right = new binaryTreeNode(3);
         
         // Add children to the right child
         root.right.left = new binaryTreeNode(12);
@@ -22,9 +22,9 @@ public class insertNodeInBst {
         /*
          *          5
          *        /   \
-         *      5      15
+         *      2      15
          *    /  \    /  \
-         *   3    7  12   18
+         *   1    3  12   18
          */
 
         insertNodeBst(root, 13);
@@ -33,9 +33,9 @@ public class insertNodeInBst {
         /*
          *          5
          *        /   \
-         *      5      15
+         *      2      15
          *    /  \    /  \
-         *   3    7  12   18
+         *   1    3  12   18
          *            \
          *             13
          */

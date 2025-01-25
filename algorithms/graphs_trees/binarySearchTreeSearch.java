@@ -3,29 +3,35 @@ import data_structures.graphs_trees.binaryTreeNode;
 
 public class binarySearchTreeSearch {
     public static void main(String[] args){
-        // Create a root node for the binarySearchTree
+        // Create a root node for the binaryTree
         binaryTreeNode root = new binaryTreeNode(5);
         
         // Create and attach left and right children of the root
-        root.left = new binaryTreeNode(3);
-        root.right = new binaryTreeNode(7);
+        root.left = new binaryTreeNode(2);
+        root.right = new binaryTreeNode(15);
         
         // Add children to the left child
         root.left.left = new binaryTreeNode(1);
-        root.left.right = new binaryTreeNode(4);
+        root.left.right = new binaryTreeNode(3);
         
         // Add children to the right child
-        root.right.left = new binaryTreeNode(6);
-        root.right.right = new binaryTreeNode(10);
+        root.right.left = new binaryTreeNode(12);
+        root.right.right = new binaryTreeNode(18);
         
-        // Print the binarySearchTree tree
-        binaryTreeNode.printTree(root);
+        // Current structure of the binary search tree
+        /*
+         *          5
+         *        /   \
+         *      2      15
+         *    /  \    /  \
+         *   1    3  12   18
+         */
 
         // Check if 3 exists in the binarySearchTree - true
         System.out.println(bstSearch(root, 3));
 
-        // Check if 3 exists in the binarySearchTree 2 -> false
-        System.out.println(bstSearch(root, 2));
+        // Check if 3 exists in the binarySearchTree 7 -> false
+        System.out.println(bstSearch(root, 7));
     }
 
     /*

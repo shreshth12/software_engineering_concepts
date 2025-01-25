@@ -78,13 +78,6 @@ public class removeNodeInBst {
             }
 
             // Case_2: Node has two children
-            /*
-            *          5
-            *        /   \
-            *      2      15
-            *    /  \    /  \
-            *   1    3  12   18
-            */
             else{
                 // Find the maximum node from the left
                 binaryTreeNode maxNodeFromLeft = findMaximumValueNode(root.left);
