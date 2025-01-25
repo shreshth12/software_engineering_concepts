@@ -1,5 +1,4 @@
 package data_structures.graphs_trees;
-
 import java.util.ArrayList;
 
 /*
@@ -10,24 +9,22 @@ import java.util.ArrayList;
  * 3. right child: This is a pointer to the right child of the current root, which is another binary tree
  */
 public class binaryTreeNode {
-    // Initiate three values that a treeNode should have
-    int value;
-    binaryTreeNode left = null;
-    binaryTreeNode right = null;
+    // Initiate three parameters that a treeNode should have
+    public int value;
+    public binaryTreeNode left = null;
+    public binaryTreeNode right = null;
 
-    // Create a constructor to initilize the values
+    // Initilize constructor for binaryTreeNode
     public binaryTreeNode(int value){
         this.value = value;
     }
 
-    // Create a toString function to output the current value, left and right children
-    @Override
-    public String toString(){
-        return "Val: " + value + " | leftchild: " + left + " | rightchild: " + right;
-    }
-
-    // NOTE: This function needs refinement for better aligned print, not yet working on it.
-    // Create a function to print the binaryTree level by level
+    /*
+     * This method takes in a single paramerter: root
+     * which is the root node of any binary tree
+     * and prints it to standard out.
+     * NOTE: It needs refinement for better aligned print
+     */
     public static void printTree(binaryTreeNode root){
         // If the root is null, print that no root found
         if(root == null){
@@ -61,29 +58,6 @@ public class binaryTreeNode {
                     levels.add(currNode.right);
                 }
             }
-        }
-    }
-
-    // method to perform a search for a target in a "binary search tree"
-    public static boolean bstSearch(binaryTreeNode root, int target){
-        // If the root is null or reached the end of the tree
-        if(root == null){
-            return false;
-        }
-
-        // If the target is on the right side, search right
-        if(target > root.value){
-            return bstSearch(root.right, target);
-        }
-
-        // If the target is on the left side, search left
-        else if(target < root.value){
-            return bstSearch(root.left, target);
-        }
-
-        // Else, found the target
-        else{
-            return true;
         }
     }
 }
