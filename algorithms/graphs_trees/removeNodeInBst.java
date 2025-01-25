@@ -1,6 +1,19 @@
 package algorithms.graphs_trees;
 import data_structures.graphs_trees.binaryTreeNode;
 
+/*
+ * Removing a node from a binarySearchTree takes O(h) in the worst case, where
+ * h is the height of the tree, because the tree can be skewed to either sides
+ * But on average/amortized, it takes about O(logN), since each level we go down
+ * we do not process half of the nodes.
+ * 
+ * Space complexity is also O(N), in the current implementation, where N is the
+ * recursive call stack when finding the target node in the bst.
+ * 
+ * This is where a data structure like binary search tree shines. While in an array,
+ * removing an element takes O(N) time, due to the shifting process involved
+ */
+
 public class removeNodeInBst {
     public static void main(String[] args) {
         // Create a root node for the binaryTree

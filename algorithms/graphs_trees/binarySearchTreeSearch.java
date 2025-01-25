@@ -1,6 +1,18 @@
 package algorithms.graphs_trees;
 import data_structures.graphs_trees.binaryTreeNode;
 
+/*
+ * Searching a node in a binarySearchTree takes O(h) in the worst case, where
+ * h is the height of the tree, because the tree can be skewed to either sides
+ * But on average/amortized, it takes about O(logN), since each level we go down
+ * we do not process half of the nodes.
+ * 
+ * Space complexity is also O(N), in the current implementation, where N is the
+ * recursive call stack when finding the target node.
+ * Using an iterative solution, we can reduce it to O(1). In that solution we create
+ * a dummy pointer, and keep moving down in the tree, until we find the target.
+ */
+
 public class binarySearchTreeSearch {
     public static void main(String[] args){
         // Create a root node for the binaryTree
