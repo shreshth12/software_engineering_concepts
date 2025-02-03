@@ -60,4 +60,55 @@ public class binaryTreeNode {
             }
         }
     }
+
+    /*
+     * This method takes in a single paramerter: root
+     * which is the root node of any binary tree
+     * and prints/DFS's the tree in an in-order way
+     */
+    public static void inOrderTraversal(binaryTreeNode root){
+        // If the node is null, or the recursive hits the end
+        if(root == null){
+            return;
+        }
+
+        // Perform printing on left -> root -> right
+        inOrderTraversal(root.left);        
+        System.out.print(root.value + " ");  
+        inOrderTraversal(root.right);        
+    }
+
+    /*
+     * This method takes in a single paramerter: root
+     * which is the root node of any binary tree
+     * and prints/DFS's the tree in an pre-order way
+     */
+    public static void preOrderTraversal(binaryTreeNode root){
+        // If the node is null, or the recursive hits the end
+        if(root == null){
+            return;
+        }
+
+        // Perform printing on root -> left -> right
+        System.out.print(root.value + " ");        
+        preOrderTraversal(root.left);        
+        preOrderTraversal(root.right);        
+    }
+
+    /*
+     * This method takes in a single paramerter: root
+     * which is the root node of any binary tree
+     * and prints/DFS's the tree in an post-order way
+     */
+    public static void postOrderTraversal(binaryTreeNode root){
+        // If the node is null, or the recursive hits the end
+        if(root == null){
+            return;
+        }
+
+        // Perform printing on left -> right -> root
+        postOrderTraversal(root.left);
+        postOrderTraversal(root.right);        
+        System.out.print(root.value + " ");    
+    }
 }
