@@ -28,7 +28,7 @@ import java.util.List;
  *             /  \
  *            65   30
  * 
- * index: 0 (14), leftChild at index = 2 * 0 + 1 = 1 (19) | rightChild at index = 2 * 0 + 2 = 2 (16)
+ * index: 0 (14), leftChildIndex at index = 2 * 0 + 1 = 1 (19) | rightChild at index = 2 * 0 + 2 = 2 (16)
  * root of index: 6 (68), 6 // 2 = index 3 (21)
  */
 
@@ -61,6 +61,70 @@ public class minHeap {
             this.heap.set(curr_idx, root);
             curr_idx = (curr_idx - 1) / 2;
         }
+    }
+
+    /*
+     * This method does not need any parameter, as it pops/removes
+     * the element based on the priority of the heap (min in this case)
+     * In order to maintain the "structure" property, the root element is
+     * popped and is swapped with the last element. Then to maintain the
+     * "order" property, it is bubbled down in the tree/array.
+     */
+    public int pop(){
+        // Check if the heap is not empty
+        if(heap.isEmpty()){
+           return -1; 
+        }
+
+        // If the heap only has a single item
+        // then remove the current item and return
+        if(this.heap.size() == 1){
+            return this.heap.remove(0);
+        }
+
+        // Swap the highest priority item/element with
+        // the lowest priority item (end of the array)
+        // then remove the last item
+        int highestPriorityItem = this.heap.get(0);
+        this.heap.set(0, this.heap.get(this.heap.size() - 1));
+        this.heap.remove(this.heap.size() - 1);
+
+        // Bubble the current highestPriorityItem until the "order" is correct
+        int curr_idx = 0;
+        while((2 * curr_idx) + 1 < this.heap.size()){
+            int leftChildIndex = (2 * curr_idx) + 1;
+            int rightChildIndex = (2 * curr_idx) + 2;
+
+            // Case 1: When the rightChild is smaller than the leftChild + currentNode
+            if ( 
+                rightChildIndex < this.heap.size() && // Right child exits?
+                this.heap.get(rightChildIndex) < this.heap.get(leftChildIndex) && // Is the rightChild smaller than the leftchild?
+                this.heap.get(curr_idx) > this.heap.get(rightChildIndex) // Is the currChild greater than rightChild? i.e also from both?
+               )
+            {
+                int temp = this.heap.get(rightChildIndex);
+                this.heap.set(rightChildIndex, this.heap.get(curr_idx));
+                this.heap.set(curr_idx, temp);
+                curr_idx = rightChildIndex;
+            }
+
+            // Case 2: When the leftChild is smaller than the rightChild + currentNode
+            else if (
+                this.heap.get(leftChildIndex) < this.heap.get(curr_idx)
+            ){
+                int temp = this.heap.get(leftChildIndex);
+                this.heap.set(leftChildIndex, this.heap.get(curr_idx));
+                this.heap.set(curr_idx, temp);
+                curr_idx = leftChildIndex;
+            }
+
+            // Case 3: Neither is smaller than the currentNode, exit
+            else {
+                break;
+            }
+        }
+
+        return highestPriorityItem;
     }
 
     // Method to print out the current heap
