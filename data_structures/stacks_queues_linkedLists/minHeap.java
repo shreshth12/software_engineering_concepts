@@ -138,7 +138,7 @@ public class minHeap {
          /* 
           Since the leaf nodes/element satisfy both structure and order
           property, we only need to bubble down the numbers which are non-leaf
-          That is, we only look at half of the nodes, which is N // 2
+          That is, we only look at half of the nodes, which is N // 2.
          */
 
         int currIndex = (this.heap.size() / 2) - 1;
