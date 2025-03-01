@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/shreshth12/software_engineering_concepts/compare/v1.1.0...v1.2.0) (2025-03-01)
+
+
+### Features
+
+* **data_structures:** Implemented `heapify()` funtionality to `minHeap.java` data structure ([1abd5e4](https://github.com/shreshth12/software_engineering_concepts/commit/1abd5e4a1c0ec8c3e3c0043d98cc9f829dde731c))
+* **data_structures:** Implemented `heapify()` funtionality to `minHeap.java` data structure ([38b9b1b](https://github.com/shreshth12/software_engineering_concepts/commit/38b9b1b409d295e1afead4e2ae89454a29811b5f))
+
 ## [1.1.0](https://github.com/shreshth12/software_engineering_concepts/compare/v1.0.0...v1.1.0) (2025-02-23)
 
 
