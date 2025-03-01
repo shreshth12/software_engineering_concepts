@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/shreshth12/software_engineering_concepts/compare/v1.0.0...v1.1.0) (2025-02-23)
+
+
+### Features
+
+* **data_structures:** Implemented `pop()` funtionality to `minHeap.java` data structure ([5303483](https://github.com/shreshth12/software_engineering_concepts/commit/53034831a82e490f6f46ca5a4c2263b96e88aa80))
+
 ## 1.0.0 (2025-02-23)
 
 
