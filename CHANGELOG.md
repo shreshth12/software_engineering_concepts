@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/shreshth12/software_engineering_concepts/compare/v1.2.0...v1.3.0) (2025-03-17)
+
+
+### Features
+
+* **data_structures:** Created `HashTable` class to support Integer Key/Value pairs using hashing and Open Addressing method ([44ae946](https://github.com/shreshth12/software_engineering_concepts/commit/44ae946f6911aa9df67433c7a8b7b130ade6511b))
+
 ## [1.2.0](https://github.com/shreshth12/software_engineering_concepts/compare/v1.1.0...v1.2.0) (2025-03-01)
 
 
